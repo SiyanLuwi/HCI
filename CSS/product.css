@@ -1,0 +1,275 @@
+.product-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fff;
+    font-family: "SF Pro Display", sans-serif;
+  }
+  
+  .product-wrapper {
+    position: relative;
+    width: 100%;
+  }
+  
+  .hero-section {
+    position: relative;
+    width: 100%;
+    height: 727px;
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 10.25%, #000 172.3%);
+  }
+  
+  .content-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+    max-width: none;
+  }
+  
+  .product-intro {
+    margin-top: 40px;
+  }
+  
+  .product-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 6px;
+  }
+  
+  .product-description {
+    font-size: 10px;
+    color: #4f4f4f;
+  }
+  
+  .features-section {
+    margin-top: 60px;
+  }
+  
+  .features-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 24px;
+  }
+  
+  .features-grid {
+    display: grid;
+    gap: 32px;
+  }
+  
+  .feature-heading {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 8px;
+  }
+  
+  .feature-text {
+    font-size: 10px;
+    color: #000;
+  }
+  
+  .footer-grid {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.5px;
+    border-width: 0.5px;
+    border-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  .footer-section {
+    background-color: #fff;
+    padding: 40px;
+  }
+  
+  .footer-title {
+    margin-bottom: 16px;
+  }
+  
+  .subscribe-section .footer-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+  }
+  
+  .products-nav .footer-title,
+  .retailers-nav .footer-title {
+    font-size: 12px;
+    font-weight: 600;
+    color: #000;
+  }
+  
+  .footer-text {
+    font-size: 10px;
+    color: #000;
+  }
+  
+  .footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 10px;
+    color: #000;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 40px;
+  }
+  
+  .subscribe-section {
+    flex: 1;
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    padding: 60px;
+  }
+  
+  .subscribe-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .section-title {
+    color: #000;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .section-description {
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0;
+  }
+  
+  .products-section {
+    width: 347px;
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    padding: 45px;
+  }
+  
+  .retailers-section {
+    width: 328px;
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    padding: 45px;
+  }
+  
+  .nav-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .nav-title {
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 25px 0;
+  }
+  
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 11px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .nav-item {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  
+  .nav-link {
+    color: #000;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    opacity: 0.7;
+  }
+  
+  @media (max-width: 991px) {
+    .content-wrapper {
+      padding-left: 16px;
+      padding-right: 16px;
+      max-width: 991px;
+    }
+  
+    .footer-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  
+    .footer-content {
+      flex-direction: column;
+    }
+  
+    .products-section,
+    .retailers-section {
+      width: 100%;
+      padding: 40px;
+    }
+  
+    .subscribe-section {
+      padding: 40px;
+    }
+  
+    .nav-content {
+      align-items: center;
+    }
+  
+    .nav-list {
+      align-items: center;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .content-wrapper {
+      padding-left: 12px;
+      padding-right: 12px;
+      max-width: 640px;
+    }
+  
+    .footer-grid {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+  
+    .subscribe-section,
+    .products-section,
+    .retailers-section {
+      padding: 20px;
+    }
+  }
