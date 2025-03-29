@@ -33,6 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
+    
+
     // Add hover effect
     item.addEventListener("mouseover", function () {
       if (!this.classList.contains("navbar__item--active")) {
