@@ -36,7 +36,7 @@
     margin-right: auto;
     padding-left: 24px;
     padding-right: 24px;
-    max-width: none;
+    width: 90%;
   }
   
   .product-intro {
@@ -63,12 +63,12 @@
     font-size: 24px;
     font-weight: 600;
     color: #000;
-    margin-bottom: 24px;
+    margin-bottom: 2px;
   }
   
   .features-grid {
     display: grid;
-    gap: 32px;
+    gap: 2px;
   }
   
   .feature-heading {
@@ -79,7 +79,7 @@
   }
   
   .feature-text {
-    font-size: 10px;
+    font-size: 15px;
     color: #000;
   }
   
@@ -171,17 +171,17 @@
   }
   
   .products-section {
-    width: 347px;
+    flex: 1;
     border: 0.5px solid rgba(0, 0, 0, 0.2);
     background-color: #fff;
-    padding: 45px;
+    padding: 60px;
   }
   
   .retailers-section {
-    width: 328px;
+    flex: 1;
     border: 0.5px solid rgba(0, 0, 0, 0.2);
     background-color: #fff;
-    padding: 45px;
+    padding: 60px;
   }
   
   .nav-content {
@@ -226,50 +226,40 @@
     .content-wrapper {
       padding-left: 16px;
       padding-right: 16px;
-      max-width: 991px;
+      max-width: 90%;;
     }
   
-    .footer-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+    .footer {
+      max-width: 100%;
+      margin-top: 40px;
     }
-  
+
+    .footer-container {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+    }
+    
     .footer-content {
       flex-direction: column;
-    }
-  
-    .products-section,
-    .retailers-section {
-      width: 100%;
-      padding: 40px;
+      padding: 20px;
     }
   
     .subscribe-section {
-      padding: 40px;
+      padding: 20px;
     }
   
-    .nav-content {
-      align-items: center;
+    .products-section {
+      padding: 20px;
     }
   
-    .nav-list {
-      align-items: center;
-    }
-  }
-  
-  @media (max-width: 640px) {
-    .content-wrapper {
-      padding-left: 12px;
-      padding-right: 12px;
-      max-width: 640px;
-    }
-  
-    .footer-grid {
-      grid-template-columns: repeat(1, minmax(0, 1fr));
-    }
-  
-    .subscribe-section,
-    .products-section,
     .retailers-section {
       padding: 20px;
+    }
+
+    .feature-text {
+      display: flex;
+      margin: 0px;
+      font-size: 12px;
     }
   }
