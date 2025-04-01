@@ -1,51 +1,60 @@
-document.addEventListener("DOMContentLoaded", function () {
+// Wait for the DOM to be fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+  const currentPage = window.location.pathname.split("/").pop();
+  
+  // Select all navigation items
   const navItems = document.querySelectorAll("[data-nav-item]");
-  const contentPlaceholder = document.querySelector("main"); // Target the main content area
-
-  navItems.forEach((item) => {
-    item.addEventListener("click", function (event) {
-      event.preventDefault(); // Prevent default link behavior
-
-      // Remove active class from all items
-      navItems.forEach((i) => {
-        i.classList.remove("navbar__item--active");
-      });
-      // Add active class to clicked item
-      this.classList.add("navbar__item--active");
-
-      // Dynamically load the content based on the clicked item
-      const page = this.getAttribute("data-page"); // Get the target page from the data attribute
-      if (page) {
-        fetch(page)
-          .then((response) => response.text())
-          .then((html) => {
-            // Extract the content inside the <main> tag from the fetched HTML
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(html, "text/html");
-            const newContent = doc.querySelector("main").innerHTML;
-
-            // Replace the current main content with the new content
-            contentPlaceholder.innerHTML = newContent;
-          })
-          .catch((error) => {
-            console.error("Error loading page:", error);
-          });
-      }
-    });
-
-    
-
-    // Add hover effect
-    item.addEventListener("mouseover", function () {
-      if (!this.classList.contains("navbar__item--active")) {
-        this.style.transform = "translateY(-2px)";
-      }
-    });
-
-    item.addEventListener("mouseout", function () {
-      if (!this.classList.contains("navbar__item--active")) {
-        this.style.transform = "translateY(0)";
-      }
-    });
+  
+  // Add active class to current page nav item
+  navItems.forEach(item => {
+    const page = item.getAttribute("data-page");
+    if ((currentPage === "" && page === "index") || 
+        currentPage === page + ".html" || 
+        currentPage.includes(page)) {
+      item.classList.add("navbar__item--active");
+    }
   });
+  
+  // Mobile menu toggle functionality
+  const hamburgerButton = document.querySelector(".hamburger-menu");
+  const navWrapper = document.querySelector(".header__nav-wrapper");
+  
+  if (hamburgerButton && navWrapper) {
+    // Set up click event on hamburger button
+    hamburgerButton.addEventListener("click", function() {
+      console.log("Hamburger clicked");
+      this.classList.toggle("hamburger-menu--active");
+      navWrapper.classList.toggle("header__nav-wrapper--active");
+    });
+    
+    document.addEventListener("click", function(event) {
+      if (!hamburgerButton.contains(event.target) && !navWrapper.contains(event.target)) {
+        hamburgerButton.classList.remove("hamburger-menu--active");
+        navWrapper.classList.remove("header__nav-wrapper--active");
+      }
+    });
+    
+    window.addEventListener("resize", function() {
+      if (window.innerWidth > 768) {
+        hamburgerButton.classList.remove("hamburger-menu--active");
+        navWrapper.classList.remove("header__nav-wrapper--active");
+      }
+    });
+  } else {
+
+  }
 });
+
+if (document.readyState === "complete" || document.readyState === "interactive") {
+  setTimeout(function() {
+    const hamburgerButton = document.querySelector(".hamburger-menu");
+    const navWrapper = document.querySelector(".header__nav-wrapper");
+    
+    if (hamburgerButton && navWrapper) {
+      hamburgerButton.addEventListener("click", function() {
+        this.classList.toggle("hamburger-menu--active");
+        navWrapper.classList.toggle("header__nav-wrapper--active");
+      });
+    }
+  }, 100);
+}

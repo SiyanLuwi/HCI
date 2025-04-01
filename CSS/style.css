@@ -82,7 +82,7 @@ body {
 .collection {
   background-color: #f1f1f1;
   margin: 15px 11px;
-  padding: 115px 80px;
+  padding: 60px 80px;
   text-align: center;
 }
 
@@ -136,6 +136,11 @@ body {
   text-decoration: none;
   display: block;
   overflow: hidden;
+}
+
+.footer__content {
+  display: flex;
+  padding-left: 50px;
 }
 
 .product-card--keyboard {
@@ -274,6 +279,10 @@ body {
     width: fit-content;
   }
 
+  .product-card--keyboard {
+    height: 267px;
+  }
+
   .products-grid__container {
     flex-direction: column;
   }
@@ -287,38 +296,23 @@ body {
   .product-card--deskmats {
     margin-top: 11px;
   }
-
+  
   .footer-content {
     flex-direction: column;
+    padding: 20px;
+  }
+  
+  .subscribe-section {
+    padding: 20px;
   }
 
   .products-section,
   .retailers-section {
     width: 100%;
-    padding: 40px;
-  }
-
-  .subscribe-section {
-    padding: 40px;
-  }
-
-  .nav-content {
-    align-items: center;
-  }
-
-  .nav-list {
-    align-items: center;
-  }
-}
-
-@media (max-width: 640px) {
-  .main {
-    padding-top: 100px;
-  }
-
-  .subscribe-section,
-  .products-section,
-  .retailers-section {
     padding: 20px;
+  }
+  
+  .footer__content {
+    padding-left: 20px;
   }
 }
