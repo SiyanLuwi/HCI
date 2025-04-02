@@ -4,13 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meletrix - Desk Mat</title>
-    <link rel="stylesheet" href="../CSS/navbar.css" />
-    <script src="../JS/script.js" defer></script>
-    <link rel="stylesheet" href="../CSS/product.css" />
+
+    <link rel="stylesheet" href="../../CSS/product.css" />
   </head>
   <body>
-    <!-- Placeholder for the navbar -->
-    <div id="navbar-placeholder"></div>
+    <div class="navbar">
+      <div class="brand-container">
+        <div class="brand-logo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="white"
+            width="16"
+          >
+            <path
+              d="M17 4C20.3137 4 23 6.68629 23 10V14C23 17.3137 20.3137 20 17 20H7C3.68629 20 1 17.3137 1 14V10C1 6.68629 3.68629 4 7 4H17ZM17 6H7C4.8578 6 3.10892 7.68397 3.0049 9.80036L3 10V14C3 16.1422 4.68397 17.8911 6.80036 17.9951L7 18H17C19.1422 18 20.8911 16.316 20.9951 14.1996L21 14V10C21 7.8578 19.316 6.10892 17.1996 6.0049L17 6ZM10 9V11H12V13H9.999L10 15H8L7.999 13H6V11H8V9H10ZM18 13V15H16V13H18ZM16 9V11H14V9H16Z"
+            ></path>
+          </svg>
+        </div>
+        <p class="brand-name">Meletrix</p>
+      </div>
+
+      <a href="../main.html" class="product-link">
+        <div class="arrow-circle">
+          <svg
+            class="left-arrow"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="black"
+            width="12"
+          >
+            <path
+              d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+            ></path>
+          </svg>
+        </div>
+        <span class="product-text">Keyboard</span>
+      </a>
+    </div>
+
     <link
       href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;600&display=swap"
       rel="stylesheet"
@@ -132,5 +164,72 @@
         </article>
       </div>
     </main>
+
+    <style>
+      * {
+        font-family: Arial, sans-serif;
+      }
+
+      /* Navigation Bar */
+      .navbar {
+        padding: 1rem 1.5rem;
+        background-color: white;
+      }
+
+      .brand-container {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem; /* Reduced space */
+      }
+
+      .brand-logo {
+        padding: 0.5rem;
+        border-radius: 9999px;
+        background-color: #000000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .brand-name {
+        font-weight: bold;
+      }
+
+      .product-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        color: black;
+        padding-top: 20px;
+      }
+
+      .product-text {
+        font-weight: 500;
+        order: 2; /* Text comes after arrow */
+      }
+
+      .arrow-circle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        background-color: #f0f0f0;
+        border-radius: 50%;
+        transition: all 0.2s ease;
+        order: 1; /* Arrow comes before text */
+      }
+
+      .product-link:hover .arrow-circle {
+        background-color: #e0e0e0;
+        transform: translateX(-3px); /* Move left on hover */
+      }
+
+      .left-arrow {
+        transform: rotate(180deg); /* Pointing left */
+      }
+    </style>
   </body>
 </html>
