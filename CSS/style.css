@@ -214,17 +214,17 @@ body {
 }
 
 .products-section {
-  width: 347px;
+  flex: 1;
   border: 0.5px solid rgba(0, 0, 0, 0.2);
   background-color: #fff;
-  padding: 45px;
+  padding: 60px;
 }
 
 .retailers-section {
-  width: 328px;
+  flex: 1;
   border: 0.5px solid rgba(0, 0, 0, 0.2);
   background-color: #fff;
-  padding: 45px;
+  padding: 60px;
 }
 
 .nav-content {
